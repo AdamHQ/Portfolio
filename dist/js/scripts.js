@@ -39,16 +39,29 @@ window.addEventListener('DOMContentLoaded', event => {
     };
 
     // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    // Ellenőrizzük, hogy a link href attribútuma létezik-e
+                    if (link.getAttribute('href') && link.getAttribute('href').includes(id)) {
+                        link.classList.add('active');
+                    }
+                });
             }
         });
+    }, {
+        threshold: 0.5 
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 
 });
