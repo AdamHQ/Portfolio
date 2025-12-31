@@ -1,0 +1,20 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": [],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "node_modules": true,
+        "scripts": true,
+        "src": true,
+        ".gitignore": false,
+        "package.json": true,
+        "package-lock.json": true,
+        "README.md": true,
+        ".editorconfig": true
+    }
+}
