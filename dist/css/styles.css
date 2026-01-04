@@ -67,8 +67,9 @@
   --bs-highlight-bg: #fff3cd;
 
   /*my custom variables*/
-  --primary-color: #1a1944;
+  --primary-color: rgb(2, 9, 85);
   --primary-color-opacity: #1a19448a;
+  --secondary-color:#9f26ad;
 }
 
 
@@ -82,7 +83,7 @@
 
 /* Body and page section styles */
 body {
-    background-color: var(--bs-white);
+    background-color: var(--primary-color);
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -91,27 +92,82 @@ body {
 }
 
 body .page-section-heading {
-    letter-spacing: 0.4em;
+    letter-spacing: 0.3em;
 }
 
 .page-section {
     background-color: var(--primary-color);
+    box-shadow: 0 0 20px 10px var(--primary-color);
+}
+
+
+
+/* A Dividert kódja */
+.hud-container {
+    width: 100%;
+}
+
+.hud-divider-horizon {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    border: 2px solid #9f26ad;
+    border-radius: 10px;
+    /* Fontos: levágja a kilógó fénycsíkot a sarkoknál */
+    overflow: hidden; 
+    
+    /* Háttér rács */
+    background-image: 
+        linear-gradient(90deg, transparent 50%, rgba(201, 21, 198, 0.3) 50%),
+        linear-gradient(0deg, transparent 50%, rgba(25, 0, 47, 0.5) 50%);
+    background-size: 10px 10px;
+    
+    /* Belső és külső izzás */
+    box-shadow: 
+        inset 0 0 15px #19002F,
+        0 0 10px rgba(193, 56, 209, 0.4);
+}
+
+.hud-divider-horizon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px; /* Kicsit szélesebb fény a lágyabb átmenetért */
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(230, 0, 255, 1), 
+        transparent);
+    filter: blur(4px);
+    animation: movingLight 6s infinite linear; /* Próbáld ki az ease-in-out-ot! */
+}
+
+@keyframes movingLight {
+    0% { left: -60%; }
+    100% { left: 110%; }
 }
 
 
 
 /* Navigation styles */
 .navbar {
-    background-image: linear-gradient(rgba(26, 25, 68, 0.8), rgba(26, 25, 68, 0.8));
+    background-image: linear-gradient(rgba(2, 9, 85, 0.8), rgba(2, 9, 85, 0.8));
 }
 
-.bi-robot:hover {
-    color: var(--bs-indigo)
+nav a img {
+    width: clamp(40px, 5vw, 80px);
+    border-radius: 30%;
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a img:hover {
+    scale: 1.1;
+    box-shadow: #9f26ad 0px 0px 10px 5px;
 }
 
 .navbar-toggler:focus {
-    border-color: var(--bs-white);
-    box-shadow: none; 
+    box-shadow: #9f26ad 0px 0px 10px 5px;
 }
 
 #mainNav .nav-link {
@@ -124,9 +180,10 @@ body .page-section-heading {
 #mainNav .nav-link:focus,
 #mainNav .nav-link.active {
     background-color: var(--bs-black);
-    color: var(--bs-white);
+    color: #9f26ad;
+    font-weight: 600;
     scale: 1.1;
-    box-shadow: var(--bs-white) 0px 0px 10px 5px;
+    box-shadow: #9f26ad 0px 0px 10px 5px;
 }
 
 
@@ -181,7 +238,7 @@ body .page-section-heading {
 /* 4. Kép nagyítása (Zoom) */
 .portfolio-item:hover {
     scale: 1.1;
-    box-shadow: var(--bs-white) 0px 0px 10px 5px;
+    box-shadow: #9f26ad 0px 0px 10px 5px;
 }
 
 /* 5. A szöveg stílusa */
@@ -298,7 +355,7 @@ footer .email {
 footer .phone:active,
 footer .email:active {
     scale: 0.9;
-    color: var(--bs-indigo);
+    color: #9f26ad;
     transition: scale 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
@@ -313,7 +370,7 @@ footer .email:active {
 
 .social-icon:active {
     scale: 0.9;
-    color: var(--bs-indigo);
+    color: #9f26ad;
     transition: all 0.1s ease;
 }
 
@@ -321,12 +378,12 @@ footer .email:active {
 @media (hover: hover) {
     .social-icon:hover {
         scale: 1.3;
-        color: var(--bs-indigo);
+        color: #9f26ad;
     }
 
     footer .phone:hover,
     footer .email:hover {
     scale: 1.1;
-    color: var(--bs-indigo);
+    color: #9f26ad;
     }
 }
