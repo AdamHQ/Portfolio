@@ -166,7 +166,7 @@ body .page-section-heading {
 }
 
 nav a img {
-    width: clamp(40px, 5vw, 80px);
+    width: clamp(20px, 4vw, 70px);
     border-radius: 30%;
     scale: 1;
     transition: all 0.3s ease-in-out;
@@ -180,6 +180,7 @@ nav a img:hover {
 .navbar-toggler {
     background-color: var(--secondary);
     color: var(--text-secondary);
+    font-size: clamp(1rem, 2vw, 1.5rem)
 }
 
 .navbar-toggler:focus {
