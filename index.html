@@ -23,17 +23,17 @@
     </head>
     <body id="page-top">
         <!--Navigation-->
-        <nav class="navbar navbar-expand-lg text-uppercase fixed-top py-2" id="mainNav">
+        <nav class="navbar navbar-expand-lg text-uppercase fixed-top py-2 py-lg-2" id="mainNav">
                 <a class="mt-0 ms-3 ms-lg-5" href="#page-top"><img src="/dist/assets/nav-logo-512x512.png" alt=""></a>
                 <button class="navbar-toggler text-uppercase rounded-2 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="bi bi-list"></i>
                 </button>
                 <div class="collapse navbar-collapse mx-3 my-2 my-lg-0" id="navbarResponsive">
-                    <ul class="navbar-nav text-center gap-4 mx-3 my-4 my-lg-0 ms-lg-auto">
-                        <li class="nav-item mx-3 mx-lg-1"><a class="nav-link px-3 px-xl-3 rounded" href="#portfolio">Portfólió</a></li>
-                        <li class="nav-item mx-3 mx-lg-1"><a class="nav-link px-3 px-xl-3 rounded" href="#about">Rólam</a></li>
-                        <li class="nav-item mx-3 mx-lg-1"><a class="nav-link px-3 px-xl-3 rounded" href="#contact">Kapcsolat</a></li>
+                    <ul class="navbar-nav text-center gap-4 mx-4 my-4 my-lg-0 ms-lg-auto">
+                        <li class="nav-item mx-3 mx-lg-1"><a class="nav-link mx-3 mx-lg-1 rounded" href="#portfolio">Portfólió</a></li>
+                        <li class="nav-item mx-3 mx-lg-1"><a class="nav-link mx-3 mx-lg-1 rounded" href="#about">Rólam</a></li>
+                        <li class="nav-item mx-3 mx-lg-1"><a class="nav-link mx-3 mx-lg-1 rounded" href="#contact">Kapcsolat</a></li>
                     </ul>
                 </div>
         </nav>
@@ -56,13 +56,13 @@
         <section class="page-section min-vh-100 d-flex align-items-start" id="portfolio">
             <div class="container">
                 <!--Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase display-6 pt-5 my-3 m-lg-5">Portfólió</h2>
+                <h2 class="page-section-heading text-center text-uppercase display-5 pt-5 my-3 my-lg-5">Portfólió</h2>
                 <!--Divider-->
                 <div class="hud-container">
                     <div class="hud-divider-horizon"></div>
                 </div>
                 <!--Portfolio Grid Items-->
-                <div class="row justify-content-center px-2 pt-5 my-5 g-2 g-lg-5">
+                <div class="row justify-content-center flex-lg-nowrap px-2 pt-5 my-5 gap-2 gap-lg-3">
                     <!--Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-4">
                         <div class="portfolio-item position-relative mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
@@ -101,10 +101,9 @@
         </section>
 
         <!--About Section-->
-        <section class="page-section about min-vh-100 d-flex flex-column justify-content-between px-5 py-3" id="about">
+        <section class="page-section min-vh-100 d-flex flex-column justify-content-between px-5 py-3" id="about">
             <div class="d-flex flex-column flex-lg-row align-items-center gap-1 mt-lg-5">
                 <!--Avatar Image-->
-                <div></div>
                 <img class="avatar mb-2 mb-lg-5" src="/dist/assets/img/NOBG.PNG" alt="profile picture of me, with with T-shirt, with arms folded" />
                 <!--About Section Content-->
                 <div class="col">
@@ -150,7 +149,7 @@
         <section class="page-section py-5" id="contact">
             <div class="container">
                 <!--Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase display-6 my-3 m-lg-5">Kapcsolat</h2>
+                <h2 class="page-section-heading text-center text-uppercase display-6 my-3 my-lg-5">Kapcsolat</h2>
                 <!--Divider-->
                 <div class="hud-container">
                     <div class="hud-divider-horizon"></div>
@@ -158,7 +157,7 @@
                 <!--Contact Section Form-->
                 <div class="row justify-content-center pt-5 mt-5">
                     <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" action="https://formspree.io/f/xzzeyozz" method="POST">
+                        <form class="p-3 rounded-2" id="contactForm" action="https://formspree.io/f/xzzeyozz" method="POST">
                             <!--Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control fs-5" id="name" name="name" type="text" placeholder="Enter your name..." required />
